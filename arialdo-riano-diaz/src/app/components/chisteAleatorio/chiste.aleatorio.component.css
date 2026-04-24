@@ -1,0 +1,137 @@
+/* CONTENEDOR */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* TITULO */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* FORMULARIO */
+.form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.form input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form button {
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form button:hover {
+  opacity: 0.8;
+}
+
+/* LISTA */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* TARJETAS */
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #eee;
+  padding: 15px;
+  border-radius: 8px;
+  background: #fff;
+  transition: 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* INFO */
+.info h3 {
+  margin: 0;
+}
+
+.info p {
+  margin: 5px 0 0;
+  color: #555;
+}
+
+/* BOTONES */
+.actions button {
+  margin-left: 5px;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #fff;
+  border-top: 5px solid black;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.actions button:first-child {
+  background: #000;
+  color: #fff;
+}
+
+.actions .delete {
+  background: #eee;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+
+  .form {
+    flex-direction: column;
+  }
+
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .actions {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+}

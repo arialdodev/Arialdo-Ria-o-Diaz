@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="overlay" *ngIf="loading">
+  <div class="spinner"></div>
+</div>
+
+  <h1>Chistes</h1>
+
+  <!-- FORMULARIO
+  <div class="form">
+    <input
+      type="text"
+      placeholder="Nombre"
+      [(ngModel)]="form.name">
+
+    <input
+      type="email"
+      placeholder="Correo"
+      [(ngModel)]="form.email">
+
+    <button (click)="save()">
+      {{ editMode ? 'Actualizar' : 'Agregar' }}
+    </button>
+  </div>
+-->
+  <!-- ESTADOS -->
+  <p *ngIf="loading">Cargando...</p>
+  <p *ngIf="error">{{ error }}</p>
+
+  <!-- LISTA -->
+  <div class="list">
+
+    <div *ngIf="chiste" class="card">
+
+      <div class="info">
+        <h3>{{ chiste.value }}</h3>
+      </div>
+
+  <!--
+    <div class="actions">
+        <button (click)="edit(user)">Editar</button>
+    </div>
+  -->
+
+    </div>
+
+  </div>
+
+</div>
