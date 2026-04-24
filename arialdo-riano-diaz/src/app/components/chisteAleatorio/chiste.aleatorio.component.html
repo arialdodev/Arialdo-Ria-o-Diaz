@@ -1,9 +1,13 @@
 <div class="container">
   <div class="overlay" *ngIf="loading">
-  <div class="spinner"></div>
-</div>
+    <div class="spinner"></div>
+  </div>
 
   <h1>Chistes</h1>
+
+  <button (click)="load()" [disabled]="loading">
+    {{ loading ? "Cargando..." : "Nuevo chiste" }}
+  </button>
 
   <!-- FORMULARIO
   <div class="form">
@@ -28,21 +32,16 @@
 
   <!-- LISTA -->
   <div class="list">
-
     <div *ngIf="chiste" class="card">
-
       <div class="info">
         <h3>{{ chiste.value }}</h3>
       </div>
 
-  <!--
+      <!--
     <div class="actions">
         <button (click)="edit(user)">Editar</button>
     </div>
   -->
-
     </div>
-
   </div>
-
 </div>

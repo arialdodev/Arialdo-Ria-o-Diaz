@@ -15,9 +15,7 @@ export class ChisteAleatorioComponent implements OnInit {
 
   constructor(private chisteAleatorioService: ChisteAleatorioService) {}
 
-  ngOnInit(): void {
-    this.load();
-  }
+  ngOnInit(): void {}
 
   load() {
     this.loading = true;
