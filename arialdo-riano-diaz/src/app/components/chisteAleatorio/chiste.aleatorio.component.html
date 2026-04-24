@@ -5,9 +5,9 @@
 
   <h1>Chistes</h1>
 
-  <button (click)="load()" [disabled]="loading">
-    {{ loading ? "Cargando..." : "Nuevo chiste" }}
-  </button>
+<button mat-raised-button color="primary" (click)="load()" [disabled]="loading">
+  {{ loading ? 'Cargando...' : 'Nuevo chiste' }}
+</button>
 
   <!-- FORMULARIO
   <div class="form">
